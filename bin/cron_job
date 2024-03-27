@@ -1,0 +1,2 @@
+# 每天23:20:00执行一次daily_routine.py, 并将日志存到cron_job.log
+20 23 * * * cd /app && /usr/local/bin/python /app/bin/daily_routine.py >> /app/log/cron_job.log 2>&1

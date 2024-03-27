@@ -1,0 +1,10 @@
+[Unit]
+Description=Trigger es-daily-routine.service EVERYDAY AT 11:40 PM
+
+[Timer]
+OnCalendar=*-*-* 23:40:00
+Persistent=true
+Unit=es-daily-routine.service
+
+[Install]
+WantedBy=multi-user.target

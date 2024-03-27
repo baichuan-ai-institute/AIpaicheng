@@ -1,0 +1,57 @@
+.
+|-- Dockerfile                       # 创建Docker镜像的配置文件
+|-- app.py                           # 接口程序
+|-- bin
+|   |-- cron_job                         # 定时任务配置文件(仅生产环境)
+|   |-- daily_routine.py                 # 定时任务所执行的python程序
+|   |-- es-daily-routine.service         # 定时任务的服务单元(仅测试环境)
+|   |-- es-daily-routine.timer           # 定时任务的定时器单元(仅测试环境)
+|   |-- save_kafka.py                    # 收集kafka消息
+|   `-- start.sh                         # docker容器启动时执行的脚本
+|-- conf                            # 配置
+|   |-- DeviceShadowEnum.java            # 原先数据源信息(已废弃)
+|   `-- config.ini                       # 各种数据源配置文件
+|-- data                            # 数据
+|   |-- daily_execution                  # 实际执行排程数据
+|   |-- daily_scheme                     # 计划排程数据
+|   |-- inst_flows                       # 瞬时流量数据
+|   `-- supplies_and_demands             # 充放热量数据
+|-- demo                            # 模块DEMO(很久没更新)
+|   |-- LKH                              # LKH算法包
+|   |-- data                             # demo用到的数据
+|   |-- or_demo1.py                      # or_utils模块的demo, 下同
+|   |-- or_demo2.py
+|   |-- or_demo3.py
+|   |-- or_demo4.py
+|   |-- or_demo5.py
+|   |-- or_demo6.py
+|   |-- pred_demo1.py                    # pred_utils模块的demo, 下同
+|   |-- pred_demo2.py
+|   `-- pred_demo3.py
+|-- iter                            # 历次迭代
+|   |-- 240130                           # 2024年01月30日迭代
+|   |-- 240220                           # 2024年02月20日迭代
+|   `-- 240222                           # 2024年02月22日迭代
+|-- log                             # 日志
+|   |-- app.log                          # app.py的运行日志
+|   |-- cron_job.log                     # 定时任务的运行日志
+|   |-- daily_routine.log                # es-daily-routine.service的运行日志
+|   |-- kafka                            # kafka消息文件夹, 按天存放收到的kafka消息
+|   |-- modules_log                      # modules各种模块的日志
+|   `-- save_kafka.log                   # bin/save_kafka.py的日志
+|-- model                           # 模型(未使用)
+|-- modules                         # 模块
+|   |-- LKH-3.0.7                        # LKH算法包
+|   |-- __init__.py
+|   |-- __pycache__
+|   |-- data_utils.py                    # 数据模块, 从各种数据源获取项目所需的数据
+|   |-- kafka_utils.py                   # kafka模块, kafka相关代码
+|   |-- model_utils.py                   # 模型模块, 时序预测模型相关代码
+|   |-- or_utils.py                      # 运筹学模块, 运筹优化最优解模型相关代码
+|   |-- pred_utils.py                    # 预测模块, 提取预测结果的代码
+|   |-- quantity_utils.py                # 量模块, 处理瞬时流量数据, 从中提取充放热量的代码
+|   `-- testutils.py                     # 草稿本, 用于调试代码
+|-- requirements.txt                # 项目依赖项
+`-- tree.txt                        # 目录树
+
+21 directories, 33 files

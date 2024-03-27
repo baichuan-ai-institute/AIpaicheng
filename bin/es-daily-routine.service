@@ -1,0 +1,11 @@
+[Unit]
+Description=RUN daily_routine.py EVERYDAY
+
+[Service]
+User=daidai
+Type=oneshot
+WorkingDirectory=/home/daidai/gy/dynamic/es
+ExecStart=/bin/bash -c "source /home/daidai/gy/dynamic/bin/activate && python ./bin/daily_routine.py 2>&1 | tee -a ./log/daily_routine.log"
+
+[Install]
+WantedBy=multi-user.target
