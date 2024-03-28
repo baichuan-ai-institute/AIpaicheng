@@ -1,2 +1,0 @@
-2024-02-29 10:18:34,721	INFO	OK	URL: https://ydcn.bccynewpower.com:15443/admin/algorithm/get-equip-sn-by-device-type?deviceType=ces	HEADERS: {"token": "gA2qTg2aEAlJhq6PtozudxMGZqZlS6Rs67mOXFJyPkk4Tq9TRBphrKAGVSffe1JB"}
-2024-02-29 10:18:35,145	INFO	OK	URL: https://ydcn.bccynewpower.com:15443/admin/algorithm/electric-fence	HEADERS: {"token": "gA2qTg2aEAlJhq6PtozudxMGZqZlS6Rs67mOXFJyPkk4Tq9TRBphrKAGVSffe1JB"}
